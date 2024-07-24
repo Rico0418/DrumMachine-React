@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: #8d8d8d;
+  padding: 5rem;
+  height: 70vh;
+}
+#drum-machine{
+  border: 5px solid orange;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #b3b3b3;
+}
+.pads{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+.drum-pad{
+  background-color:#8d8d8d;
   color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  transition: orange 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.drum-pad:hover,
+.drum-pad.active {
+  background-color: orange;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.7);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="range"]:focus{
+  border: none;
 }
